@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: Animal example
+title: Personal Expense Tracker
 ---
 classDiagram
     direction BT
