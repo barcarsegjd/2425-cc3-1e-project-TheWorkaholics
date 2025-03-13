@@ -6,13 +6,13 @@
 
 You should already have Git installed. Install Git if you haven't already https://git-scm.com/
 
-1. Navigate to the link of the repository https://github.com/pacalso-jjc/2425-2nd-cc3-1e-rpg
+1. Navigate to the link of the [repository](https://github.com/barcarsegjd/2425-cc3-1e-PersonalExpenseTracker-FinalProject.git)
 1. Click on the green button labeled as Code, then copy the link provided.
 1. Open cmd or git-bash in your machine.
 1. Navigate to where you want to clone the repository.
     `cd C:\dev`
 1. Clone the repository by executing the following command
-    `git clone https://github.com/pacalso-jjc/2425-2nd-cc3-1e-rpg.git`
+    `git clone https://github.com/barcarsegjd/2425-cc3-1e-PersonalExpenseTracker-FinalProject.git`
 1. Start making changes on the files you have cloned!
 
 
@@ -23,7 +23,7 @@ You should already have a task pickup before proceeding to the following steps.
 1. Go to the project tab of the repository then open the project.
 1. Click on the title of the task you are working on.
 1. On the right, under the development tab, there is a blue text saying "Create a branch", click the text.
-1. Rename the branch to the format `doc-#` for documentation tasks or `feat-#` for feature tasks where # is the number of the task you are working on
+1. Rename the branch to the format `name-#` for documentation tasks or `surname-#` for feature tasks where # is the number of the task you are working on
 
 
 ## Checking out the branch to your local machine
@@ -31,8 +31,8 @@ You should already have a task pickup before proceeding to the following steps.
 You should already have installed git, cloned the project, and created a personal branch by this point.
 
 1. Open cmd or git-bash
-1. Navigate to where you cloned the project i.e `cd C:\dev\2425-2nd-cc3-1e-rpg`
-1. Checkout the branch you have created i.e `git checkout branch-name` where branch-name is the name of your created branch e.g `doc-1` or `feat-67`
+1. Navigate to where you cloned the project i.e `cd C:\dev\2425-cc3-1e-PersonalExpenseTracker-FinalProject`
+1. Checkout the branch you have created i.e `git checkout branch-name` where branch-name is the name of your created branch e.g `glex-2` or `barcarse-13`
 
 ## Modifying the files in your personal branch
 
