@@ -112,6 +112,7 @@ classDiagram
         EUR
         GBP
         JPY
+        PHP
     }
 
     class EntryType {
