@@ -1,5 +1,98 @@
 # 2425-2nd-cc3-1e-project-TheWorkaholics
 
+# Personal Expense Tracker 💰
+
+## Overview
+The Personal Expense Tracker is an application in our final project developed using Java Swing on Apache NetBeans IDE and MySQL for Database Management. This system enables users to monitor their financial habits, track previous transactions, and visualize monthly financial data using charts.
+
+## Software Used
+- **IDE:** Virtual Studio Code / Apache NetBeans
+- **Database:** MySQL
+- **Java UI Framework:** Java Swing
+- **Chart Library:** xChart
+
+## Features
+1. **Account Management:** Users can create and manage multiple accounts to meet their financial needs.
+1. **Summarized Display:** Provides users with a clear overview of their financial status, including current savings and spending habits.
+1. **Income and Expense Tracking:** Dedicated tabs allow users to conveniently record their income and expenses, facilitating efficient management of finances.
+1. **Interactive Charts:** Visualize monthly expenditure and savings through interactive charts, offering users insightful graphical representations of their financial data.
+1. **Transaction History:** Easily access and review the latest transactions, enabling users to track their financial activity over time.
+1. **Savings Target:** Set savings targets with a progress bar indicating the progress towards the goal for the current month, empowering users to stay focused on their financial objectives.
+
+## Additional Libraries Used
+- **JDBC Driver (MySQL Connector):** Connects Java applications to MySQL databases.
+- **JCalendar:** Provides Date-related components for user-friendly date selection.
+- **XChart:** Generates interactive charts for visualizing financial data.
+- **AbsoluteLayout:** Facilitates precise positioning of UI components.
+
+## Project Structure
+
+```
+
+```
+
+## Screenshots
+
+### Login
+
+### Signup
+
+### Home
+
+### Accounts
+
+### Income
+
+### Expense
+
+### Budget
+
+### Archive
+
+## Installation
+1. Clone the repository.
+1. Open the project in Apache NetBeans.
+1. Set up the MySQL database according to the provided schema.
+   - Navigate to the `"none yet"` folder and follow the instructions in the `README.md` file to set up the database.
+1. Run the project.
+
+## Usage
+1. Sign up for an account or log in if you already have one.
+1. Add accounts and set up your financial details.
+1. Record your income and expenses.
+1. Monitor your financial status through the provided charts and summaries.
+
+## Collaborators
+- [Sherline Balla](https://github.com/ballasm0415)
+- [Glexainth John Barcarse](https://github.com/barcarsegjd)
+- [Leo Angelo Opolinto](https://github.com/opolintola)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Contributing to this repository
 
 ## Cloning the repository
