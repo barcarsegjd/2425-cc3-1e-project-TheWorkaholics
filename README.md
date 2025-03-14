@@ -1,4 +1,4 @@
-# 2425-2nd-cc3-1e-rpg
+# 2425-2nd-cc3-1e-project-TheWorkaholics
 
 # Contributing to this repository
 
