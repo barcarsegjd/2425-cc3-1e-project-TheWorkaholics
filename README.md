@@ -19,7 +19,7 @@ The Personal Expense Tracker is an application in our final project developed us
 1. **Transaction History:** Easily access and review the latest transactions, enabling users to track their financial activity over time.
 1. **Savings Target:** Set savings targets with a progress bar indicating the progress towards the goal for the current month, empowering users to stay focused on their financial objectives.
 
-## Additional Projected Libraries Used
+## Additional Projected Libraries To Be Used
 - **JDBC Driver (MySQL Connector):** Connects Java applications to MySQL databases.
 - **JCalendar:** Provides Date-related components for user-friendly date selection.
 - **XChart:** Generates interactive charts for visualizing financial data.
