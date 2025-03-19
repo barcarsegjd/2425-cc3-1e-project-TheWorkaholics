@@ -4,8 +4,8 @@ import java.util.Map;
 public class AnalyticsReport {
     private LocalDate periodStart;
     private LocalDate periodEnd;
-    private double totalIncome
-    private double totalExpenses
+    private double totalIncome;
+    private double totalExpenses;
     private double netSavings;
     private Map<Category, Double> categoryBreakdown;
 
