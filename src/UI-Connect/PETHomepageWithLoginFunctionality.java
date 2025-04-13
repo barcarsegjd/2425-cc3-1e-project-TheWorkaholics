@@ -1,3 +1,5 @@
+package com.mycompany.cc3.group.project;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -12,7 +14,16 @@ public class PETHomepageWithLoginFunctionality {
         loadAccountData();
         showLoginScreen();
     }
-
+    
+    private static void updateTable(JTable table) {
+        UserAccount account = accounts.get(loggedInUser);
+        if (account != null) {
+            table.setValueAt(account.getIncome(), 0, 1);
+            table.setValueAt(account.getSavings(), 1, 1);
+            table.setValueAt(account.getExpenses(), 2, 1);
+            table.setValueAt(account.getDebt(), 3, 1);
+        }
+    }  
     // Login screen
     public static void showLoginScreen() {
         JFrame loginFrame = new JFrame("Login");
@@ -144,51 +155,87 @@ public class PETHomepageWithLoginFunctionality {
     }
     // Home screen
     private static void showHomeScreen() {
-        JFrame frame = new JFrame("Personal Expense Tracker");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(700, 500);
-        frame.setLayout(new BorderLayout());
+    JFrame frame = new JFrame("Personal Expense Tracker - " + loggedInUser);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(700, 500);
+    frame.setLayout(new BorderLayout());
 
-        JPanel topPanel = new JPanel(new FlowLayout());
-        JButton homepageButton = new JButton("Visit Homepage");
-        JButton addButton = new JButton("Add Data");
-        JButton viewButton = new JButton("View Data");
-        JButton updateButton = new JButton("Update Data");
-        JButton deleteButton = new JButton("Delete Account");
-        JButton logoutButton = new JButton("Logout");
-        topPanel.add(homepageButton);
-        topPanel.add(addButton);
-        topPanel.add(viewButton);
-        topPanel.add(updateButton);
-        topPanel.add(deleteButton);
-        topPanel.add(logoutButton);
+    // Top panel with buttons (unchanged)
+    JPanel topPanel = new JPanel(new FlowLayout());
+    JButton homepageButton = new JButton("Visit Homepage");
+    JButton addButton = new JButton("Add Data");
+    JButton viewButton = new JButton("Refresh Data");
+    JButton updateButton = new JButton("Update Data");
+    JButton deleteButton = new JButton("Delete Account");
+    JButton logoutButton = new JButton("Logout");
+    topPanel.add(homepageButton);
+    topPanel.add(addButton);
+    topPanel.add(viewButton);
+    topPanel.add(updateButton);
+    topPanel.add(deleteButton);
+    topPanel.add(logoutButton);
 
-        frame.add(topPanel, BorderLayout.NORTH);
-        
-        homepageButton.addActionListener(e -> {
-            frame.dispose();
-            PETHomepage.constructUIHome();
-        });
-        addButton.addActionListener(e -> addData());
-        viewButton.addActionListener(e -> viewData());
-        updateButton.addActionListener(e -> updateData());
-        deleteButton.addActionListener(e -> {
-            deleteAccount();
-            frame.dispose();
-            showLoginScreen();
-        });
-        logoutButton.addActionListener(e -> {
-            frame.dispose();
-            loggedInUser = null;
-            showLoginScreen();
-        });
+    // Create table model
+    String[] columnNames = {"Category", "Amount"};
+    Object[][] data = {
+        {"Income", "0"},
+        {"Savings", "0"},
+        {"Expenses", "0"},
+        {"Debt", "0"}
+    };
+    
+    JTable dataTable = new JTable(data, columnNames);
+    dataTable.setEnabled(false); // Make table non-editable
+    JScrollPane scrollPane = new JScrollPane(dataTable);
+    
+    // Create a panel for the table
+    JPanel tablePanel = new JPanel(new BorderLayout());
+    tablePanel.add(scrollPane, BorderLayout.CENTER);
+    tablePanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        frame.setVisible(true);
-    }
+    // Add components to frame
+    frame.add(topPanel, BorderLayout.NORTH);
+    frame.add(tablePanel, BorderLayout.CENTER);
+
+    // Update table with current data
+    updateTable(dataTable);
+
+    // Button actions
+    homepageButton.addActionListener(e -> {
+        frame.dispose();
+        PETHomepage.constructUIHome();
+    });
+    
+    addButton.addActionListener(e -> {
+        addData();
+        updateTable(dataTable); // Refresh table after adding data
+    });
+    
+    viewButton.addActionListener(e -> updateTable(dataTable)); // Refresh button
+    
+    updateButton.addActionListener(e -> {
+        updateData();
+        updateTable(dataTable); // Refresh table after updating
+    });
+    
+    deleteButton.addActionListener(e -> {
+        deleteAccount();
+        frame.dispose();
+        showLoginScreen();
+    });
+    
+    logoutButton.addActionListener(e -> {
+        frame.dispose();
+        loggedInUser = null;
+        showLoginScreen();
+    });
+
+    frame.setVisible(true);
+}
     
     // Visit Homepage
     // Create: Add financial data
-    private static void addData() {
+    private static boolean addData() {
         UserAccount account = accounts.get(loggedInUser);
         String income = JOptionPane.showInputDialog("Enter income:");
         String savings = JOptionPane.showInputDialog("Enter savings:");
@@ -202,21 +249,15 @@ public class PETHomepageWithLoginFunctionality {
             account.setDebt(debt);
             saveAccountData();
             JOptionPane.showMessageDialog(null, "Data added successfully!");
+            return true;
         }
+        return false;
     }
     
     // Read: View financial data
-    private static void viewData() {
-        UserAccount account = accounts.get(loggedInUser);
-        String message = "Income: " + account.getIncome() +
-                         "\nSavings: " + account.getSavings() +
-                         "\nExpenses: " + account.getExpenses() +
-                         "\nDebt: " + account.getDebt();
-        JOptionPane.showMessageDialog(null, message);
-    }
 
     // Update: Modify financial data
-    private static void updateData() {
+    private static boolean updateData() {
         UserAccount account = accounts.get(loggedInUser);
         String income = JOptionPane.showInputDialog("Update income:", account.getIncome());
         String savings = JOptionPane.showInputDialog("Update savings:", account.getSavings());
@@ -230,7 +271,9 @@ public class PETHomepageWithLoginFunctionality {
             account.setDebt(debt);
             saveAccountData();
             JOptionPane.showMessageDialog(null, "Data updated successfully!");
+            return true;
         }
+        return false;
     }
 
     // Delete: Remove account
