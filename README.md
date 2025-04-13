@@ -7,9 +7,9 @@ The Personal Expense Tracker is an application in our final project developed us
 
 ## Software to be used
 - **IDE:** Virtual Studio Code / Apache NetBeans
-- **Database:** MySQL
+- **Database:** File-Based Persistence
 - **Java UI Framework:** Java Swing
-- **Chart Library:** xChart
+- **Chart Library:** n/a
 
 ## Projected Features
 1. **Account Management:** Users can create and manage multiple accounts to meet their financial needs.
@@ -19,11 +19,6 @@ The Personal Expense Tracker is an application in our final project developed us
 1. **Transaction History:** Easily access and review the latest transactions, enabling users to track their financial activity over time.
 1. **Savings Target:** Set savings targets with a progress bar indicating the progress towards the goal for the current month, empowering users to stay focused on their financial objectives.
 
-## Additional Projected Libraries To Be Used
-- **JDBC Driver (MySQL Connector):** Connects Java applications to MySQL databases.
-- **JCalendar:** Provides Date-related components for user-friendly date selection.
-- **XChart:** Generates interactive charts for visualizing financial data.
-- **AbsoluteLayout:** Facilitates precise positioning of UI components.
 
 ## Projected Structure
 
@@ -66,31 +61,6 @@ The Personal Expense Tracker is an application in our final project developed us
 - [Sherline Balla](https://github.com/ballasm0415)
 - [Glexainth John Barcarse](https://github.com/barcarsegjd)
 - [Leo Angelo Opolinto](https://github.com/opolintola)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Contributing to this repository
