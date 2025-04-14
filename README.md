@@ -23,8 +23,6 @@ The Personal Expense Tracker is an application in our final project developed us
 ## Installation
 1. Clone the repository.
 1. Open the project in Apache NetBeans.
-1. Set up the MySQL database according to the provided schema.
-   - Navigate to the `"none yet"` folder and follow the instructions in the `README.md` file to set up the database.
 1. Run the project.
 
 ## Usage
