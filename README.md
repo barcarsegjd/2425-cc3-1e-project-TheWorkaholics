@@ -20,30 +20,6 @@ The Personal Expense Tracker is an application in our final project developed us
 1. **Savings Target:** Set savings targets with a progress bar indicating the progress towards the goal for the current month, empowering users to stay focused on their financial objectives.
 
 
-## Projected Structure
-
-```
-
-```
-
-## Screenshots
-
-### Login
-
-### Signup
-
-### Home
-
-### Accounts
-
-### Income
-
-### Expense
-
-### Budget
-
-### Archive
-
 ## Installation
 1. Clone the repository.
 1. Open the project in Apache NetBeans.
