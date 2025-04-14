@@ -15,7 +15,6 @@ The Personal Expense Tracker is an application in our final project developed us
 1. **Account Management:** Users can create and manage multiple accounts to meet their financial needs.
 1. **Summarized Display:** Provides users with a clear overview of their financial status, including current savings and spending habits.
 1. **Income and Expense Tracking:** Dedicated tabs allow users to conveniently record their income and expenses, facilitating efficient management of finances.
-1. **Interactive Charts:** Visualize monthly expenditure and savings through interactive charts, offering users insightful graphical representations of their financial data.
 1. **Transaction History:** Easily access and review the latest transactions, enabling users to track their financial activity over time.
 1. **Savings Target:** Set savings targets with a progress bar indicating the progress towards the goal for the current month, empowering users to stay focused on their financial objectives.
 
