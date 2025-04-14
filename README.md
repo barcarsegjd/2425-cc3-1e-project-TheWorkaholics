@@ -3,7 +3,7 @@
 # Personal Expense Tracker 💰
 
 ## Overview
-The Personal Expense Tracker is an application in our final project developed using Java Swing on Apache NetBeans IDE and MySQL for Database Management. This system enables users to monitor their financial habits, track previous transactions, and visualize monthly financial data using charts.
+The Personal Expense Tracker is an application in our final project developed using Java Swing on Apache NetBeans IDE and File-Based Persistence for Database Management. This system enables users to monitor their financial habits, track previous transactions, and visualize monthly financial data using charts.
 
 ## Software to be used
 - **IDE:** Virtual Studio Code / Apache NetBeans
